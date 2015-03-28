@@ -14,6 +14,7 @@ RSpec.describe FarmersMarketAPI do
       expect(api).to receive(:call_api).and_return(fixture_data)
       markets = api.get_markets(48197)
       expect(markets.length).to eq(19)
+      expect(markets).to all(be_a Market)
     end
   end
 end
