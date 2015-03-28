@@ -7,11 +7,11 @@ class Market
   # Takes in id and marketname from the API response
   # and parses out the distance
   def initialize(id, marketname)
-  	name = marketname.split[1..-1].join(" ")
-  	distance = marketname.split[0]
-  	@id = id
-  	@name = name
-  	@distance = distance
+    name = marketname.split[1..-1].join(" ")
+    distance = marketname.split[0]
+    @id = id
+    @name = name
+    @distance = distance
   end
 end
 
