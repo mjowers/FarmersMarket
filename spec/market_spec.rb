@@ -8,6 +8,14 @@ RSpec.describe Market do
 
     expect(market.id).to eq(1)
     expect(market.name).to eq('Wayne Farmers Market')
-    expect(market.distance).to eq('12.8') 
+    expect(market.distance).to eq('12.8')
   end
+
+  it "does not require a name" do
+    market = Market.new(1, "")
+
+    expect(market.id).to eq(1)
+    expect(market.name).to eq("")
+    expect(market.distance).to eq("")
+  end  
 end
