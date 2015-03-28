@@ -17,4 +17,10 @@ RSpec.describe Market do
     expect(market.name).to eq("")
     expect(market.distance).to eq("")
   end
+
+  it "parses a products list" do
+    market = Market.new(1, "")
+    market.products = "Milk;    Cheese; Celery;Fresh tomatoes"
+    expect(market.products).to eq(["Milk", "Cheese", "Celery", "Fresh tomatoes"])
+  end
 end

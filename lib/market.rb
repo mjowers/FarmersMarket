@@ -19,4 +19,8 @@ class Market
     @name = name
     @distance = distance
   end
+
+  def products=(products)
+    @products = products.split(/;\s*/)
+  end
 end
