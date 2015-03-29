@@ -24,9 +24,9 @@ RSpec.describe Market do
     expect(market.products).to eq(["Milk", "Cheese", "Celery", "Fresh tomatoes"])
   end
 
-  it "removes trailing <br> tags and semicolon from schedule" do
+  it "removes whitespace, <br> tags, and semicolon from schedule" do
     market = Market.new(1, "")
-    market.schedule = "05/07/2013 to 10/29/2013 Tue: 2:00 PM-6:00 PM;<br> <br> <br> "
+    market.schedule = "    05/07/2013 to 10/29/2013 Tue: 2:00 PM-6:00 PM;<br> <br> <br>       "
     expect(market.schedule).to eq("05/07/2013 to 10/29/2013 Tue: 2:00 PM-6:00 PM")
   end
 end

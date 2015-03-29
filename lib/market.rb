@@ -25,6 +25,6 @@ class Market
   end
 
   def schedule=(schedule)
-    @schedule = schedule.split(";")[0]
+    @schedule = schedule.split(";")[0].strip
   end
 end
