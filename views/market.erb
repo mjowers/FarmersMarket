@@ -28,7 +28,12 @@
 	<p> 
 		<%= market.address %>
 	</p>
+	<% google_maps_query = market.name + ' ' + market.address %>
+	<% if ENV['GOOGLE_MAPS_API_KEY'] %>
+		<iframe src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&q=<%= google_maps_query %>" width="600" height="450" frameborder="0" style="border:0"></iframe>
+	<% else %>
+		<p>To see embedded maps, set the GOOGLE_MAPS_API_KEY environment variable</p>
+	<% end %>
 	<a href="<%= market.googlelink %>">View in Google Maps</a>
-	
 </body>
 </html>
