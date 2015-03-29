@@ -2,8 +2,8 @@
 # see: http://search.ams.usda.gov/farmersmarkets/v1/svcdesc.html
 
 class Market
-  attr_accessor :address, :googlelink, :products, :schedule
-  attr_reader :id, :name, :distance
+  attr_accessor :address, :googlelink, :name, :products, :schedule
+  attr_reader :id, :distance
 
   # Takes in id and marketname from the API response
   # and parses out the distance

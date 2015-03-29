@@ -15,3 +15,15 @@ get '/search' do
   	:markets => markets,
   }
 end
+
+get '/markets/:id' do
+  id = params[:id]
+  api = FarmersMarketAPI.new
+  market = api.get_market(id)
+  
+  # mktDetails doesn't return the name, so just hacking it in
+  market.name = params[:name] || "Farmer's Market"
+  erb :market, :locals => {
+    :market => market,
+  }
+end

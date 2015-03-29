@@ -11,7 +11,7 @@
 	</p>
 	<% markets.each do |market| %>
 		<p>
-			Market name: <%= market.name %>
+			Market name: <a href="/markets/<%= market.id %>?name=<%= market.name %>"><%= market.name %></a>
 			Distance from <%= zipcode %>: <%= market.distance %> miles
 		</p>
 	<% end %>
