@@ -23,4 +23,8 @@ class Market
   def products=(products)
     @products = products.split(/;\s*/)
   end
+
+  def schedule=(schedule)
+    @schedule = schedule.split(";")[0]
+  end
 end

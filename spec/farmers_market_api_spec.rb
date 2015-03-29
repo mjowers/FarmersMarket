@@ -30,7 +30,7 @@ RSpec.describe FarmersMarketAPI do
       expect(market).to be_a Market
       expect(market.address).to eq("Ypsilanti, Michigan, 48197")
       expect(market.googlelink).to eq("http://maps.google.com/?q=42.239797%2C%20-83.616750%20(%22Downtown+Ypsilanti+Farmers'+Market%22)")
-      expect(market.schedule).to eq("05/07/2013 to 10/29/2013 Tue: 2:00 PM-6:00 PM;<br> <br> <br> ")
+      expect(market.schedule).to eq("05/07/2013 to 10/29/2013 Tue: 2:00 PM-6:00 PM")
     end
 
     it "parses products into an array of products" do
