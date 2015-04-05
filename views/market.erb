@@ -2,12 +2,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="/main.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <title>Farmer's Market Search</title>
 </head>
 <body>
+
 	<h1><%= market.name %></h1>
+	<div class="background">
+  		<div class="transbox">
 	<% if not market.schedule.empty? %>
-		<h2>Schedule</h2>
+		<h2>Schedule:</h2>
 		<p>
 			<%= market.schedule %>
 		</p>
@@ -28,12 +33,15 @@
 	<p> 
 		<%= market.address %>
 	</p>
+	</div>
+	</div>
 	<% google_maps_query = market.name + ' ' + market.address %>
 	<% if ENV['GOOGLE_MAPS_API_KEY'] %>
-		<iframe src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&q=<%= google_maps_query %>" width="600" height="450" frameborder="0" style="border:0"></iframe>
+		<iframe src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&q=<%= google_maps_query %>" width="600" height="450" frameborder="0" ></iframe>
 	<% else %>
 		<p>To see embedded maps, set the GOOGLE_MAPS_API_KEY environment variable</p>
 	<% end %>
 	<a href="<%= market.googlelink %>">View in Google Maps</a>
+
 </body>
 </html>

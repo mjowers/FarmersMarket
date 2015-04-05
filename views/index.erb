@@ -2,17 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <title>Farmer's Market Search</title>
 </head>
 <body>
 	<h1>Farmer's Market Search</h1>
+	<div class="background">
+		<div id ="index" class="transbox">
 	<p>
 		Enter a zipcode to find the nearest Farmer's Markets!
 	</p>
-	<form action="search" method="get">
-		<label>Zipcode:</label> 
-		<input type="text" name="zipcode">
-		<input type="submit" value="Submit">
-	</form>
+	
+			<form action="search" method="get">
+				<!-- <label>Zipcode:</label> -->
+				<input type="text" name="zipcode" placeholder="zipcode" autofocus=true>
+				<!-- <input type="submit" value="Submit"> -->
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

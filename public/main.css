@@ -1,0 +1,90 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Lato, latin,latin-ext;
+  background-color: #fbf7e4;
+  color: #8c4c3e;
+}
+
+h1{
+	background-color: #401a0d;
+	padding: 14px;
+  	margin-bottom: 10px;
+  	margin-top: 10px;
+	color: #bf8f73;
+	font-weight: bold;
+	border-style: double;
+	font-size: 40px;
+	text-align: center;
+}
+
+h2 {
+	background-color: #401a0d;
+	color: #bf8f73;
+	font-weight: bold;
+	padding: 10px;
+	margin: 0;
+}
+
+p {
+	color: #8c4c3e;
+	font-size: 18px
+}
+
+ul {
+	margin: 5%;
+}
+
+a {
+    color: #8e001c;
+    text-decoration: none;
+}
+
+a:hover { 
+    text-decoration: underline;
+}
+
+form input, form button {
+	height: 32px;
+    align-content: center;
+    text-align: center;
+    margin: 5px;
+    color: #8c4c3e;
+    border-color: #8c4c3e;
+    background-color: #fbf7e4;
+    font-size: 24px;
+}
+
+form button {
+	height: 36px;
+}
+
+div#index {
+	text-align: center;
+	font-size: 24px;	
+}
+
+div#index p{
+	margin: 0;
+	font-size: 24px;
+}
+
+iframe {
+	width: 795px;
+	border: double;
+	margin-top: 10px;
+}
+
+div.transbox {
+    margin: fixed;
+    background-color: #ffffff;
+    border: double;
+    opacity: .7;
+    filter: alpha(opacity=150); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+}
